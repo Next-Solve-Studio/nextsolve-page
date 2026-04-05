@@ -5,7 +5,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 export default function InitialContent() {
@@ -34,19 +34,19 @@ export default function InitialContent() {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center px-6 md:px-10 overflow-hidden bg-black ">
       {/* Animated gradient orbs */}
-      <div className="absolute inset-0 overflow-hidden">
+{/*       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute top-1/2 -left-40 w-96 h-96 bg-blue/10 rounded-full blur-3xl animate-pulse delay-1000" />
         <div className="absolute bottom-0 right-20 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-pulse delay-700" />
-      </div>
-
+      </div> */}
+{/* 
       <div
         className="absolute inset-0 opacity-5"
         style={{
           backgroundImage: `linear-gradient(to right, #79C4F2 1px, transparent 1px), linear-gradient(to bottom, #79C4F2 1px, transparent 1px)`,
           backgroundSize: "60px 60px",
         }}
-      />
+      /> */}
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 max-w-7xl w-full items-center relative z-10 max-[748px]:py-30">
         <div
@@ -62,14 +62,8 @@ export default function InitialContent() {
             </div>
 
             <Swiper
-              modules={[Pagination, Autoplay]}
-              pagination={{
-                clickable: true,
-                bulletClass:
-                  "swiper-pagination-bullet !bg-white/30 !opacity-100",
-                bulletActiveClass: "!bg-blue !w-8 !rounded-full",
-              }}
-              autoplay={{ delay: 4000, disableOnInteraction: false }}
+              modules={[Autoplay]}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
               navigation={{
                 nextEl: ".swiper-button-next-custom",
                 prevEl: ".swiper-button-prev-custom",
@@ -91,19 +85,6 @@ export default function InitialContent() {
                 </SwiperSlide>
               ))}
             </Swiper>
-
-            <button
-              type="button"
-              className="swiper-button-prev-custom absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm text-white hover:bg-blue hover:scale-110 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100"
-            >
-              ←
-            </button>
-            <button
-              type="button"
-              className="swiper-button-next-custom absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm text-white hover:bg-blue hover:scale-110 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100"
-            >
-              →
-            </button>
           </div>
         </div>
 
