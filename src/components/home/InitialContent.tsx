@@ -33,21 +33,6 @@ export default function InitialContent() {
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center px-6 md:px-10 overflow-hidden bg-black ">
-      {/* Animated gradient orbs */}
-{/*       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-1/2 -left-40 w-96 h-96 bg-blue/10 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute bottom-0 right-20 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-pulse delay-700" />
-      </div> */}
-{/* 
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `linear-gradient(to right, #79C4F2 1px, transparent 1px), linear-gradient(to bottom, #79C4F2 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-        }}
-      /> */}
-
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 max-w-7xl w-full items-center relative z-10 max-[748px]:py-30">
         <div
           data-aos="fade-right"

@@ -1,47 +1,62 @@
+"use client";
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
-const dtcards = [
-  {
-    id: 1,
-    title: "E-commerce",
-    description:
-      "Crie sua loja virtual e comece agora mesmo a vender seus produtos online, com segurança e praticidade.",
-  },
-  {
-    id: 2,
-    title: "Landing Page",
-    description:
-      "Crie agora sua landing page e apresente sua empresa ao mundo, conquistando mais visibilidade e credibilidade online.",
-  },
-  {
-    id: 3,
-    title: "Automação com IA",
-    description:
-      "Cansado(a) de responder clientes o tempo todo ou de lidar com tarefas repetitivas? Nós automatizamos esses processos para você.",
-  },
-  {
-    id: 4,
-    title: "Aplicativos Android/iOS",
-    description:
-      "Desenvolvemos aplicativos com design moderno, dinâmico e funcional, feitos sob medida para impulsionar sua empresa.",
-  },
-  {
-    id: 5,
-    title: "Sistemas",
-    description:
-      "Sistemas completos para gerenciar, automatizar e escalar as operações do seu negócio com total eficiência.",
-  },
-];
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function SolutionHome() {
+  useEffect(() => {
+    Aos.init({
+      duration: 700,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
+  const dtcards = [
+    {
+      id: 1,
+      title: "E-commerce",
+      description:
+        "Crie sua loja virtual e comece agora mesmo a vender seus produtos online, com segurança e praticidade.",
+    },
+    {
+      id: 2,
+      title: "Landing Page",
+      description:
+        "Crie agora sua landing page e apresente sua empresa ao mundo, conquistando mais visibilidade e credibilidade online.",
+    },
+    {
+      id: 3,
+      title: "Automação com IA",
+      description:
+        "Cansado(a) de responder clientes o tempo todo ou de lidar com tarefas repetitivas? Nós automatizamos esses processos para você.",
+    },
+    {
+      id: 4,
+      title: "Aplicativos Android/iOS",
+      description:
+        "Desenvolvemos aplicativos com design moderno, dinâmico e funcional, feitos sob medida para impulsionar sua empresa.",
+    },
+    {
+      id: 5,
+      title: "Sistemas",
+      description:
+        "Sistemas completos para gerenciar, automatizar e escalar as operações do seu negócio com total eficiência.",
+    },
+  ];
   return (
     <section className="w-full min-h-screen flex bg-black px-12 py-20">
       <div
         className="max-w-6xl mx-auto flex  gap-5 flex-wrap-reverse items-center justify-center
       "
       >
-        <div className="flex-1 flex justify-center">
+        <div
+          className="flex-1 flex justify-center"
+          data-aos="fade-right"
+          data-aos-duration="800"
+        >
           <div className="w-full max-w-xl">
             <p className="text-blue text-[11px] font-semibold tracking-[0.2em] uppercase mb-4 font-syne text-center md:text-left">
               Nossas soluções
@@ -59,7 +74,7 @@ export default function SolutionHome() {
             </p>
 
             <ul className="flex flex-col gap-2 items-center md:items-start">
-              {dtcards.map((item, i) => (
+              {dtcards.map((item) => (
                 <div key={item.id} className="w-full max-w-md">
                   <li className="w-200 group rounded-xl border border-transparent px-5 py-4.5 hover:bg-blue/5 hover:border-blue/20 transition-all duration-200 cursor-pointer">
                     <Link href="" className="flex items-center gap-3">
@@ -78,7 +93,8 @@ export default function SolutionHome() {
           </div>
         </div>
 
-        <div className="shrink-0 w-340px">
+        <div className="shrink-0 w-340px" data-aos="fade-left"
+          data-aos-duration="800">
           <div className="inline-flex items-center gap-2 bg-blue/8 border border-blue/20 rounded-full px-3 py-1 mb-7">
             <span className="w-1.25 h-1.25 rounded-full bg-blue animate-pulse" />
             <span className="text-blue font-syne text-[11px] font-semibold tracking-wide">
