@@ -1,53 +1,69 @@
 "use client";
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
-
-const solutions = [
-  {
-    id: 1,
-    image: "/medalbrazil.png",
-    alt: "Medalhas Brasil",
-    href: "https://www.medalhasbrasil.com/",
-  },
-  {
-    id: 2,
-    image: "/visiologo.png",
-    alt: "Ótica VisioCorp",
-    href: "https://www.visiocorp.com/",
-  },
-  {
-    id: 3,
-    image: "/bmcodelogo.png",
-    alt: "BMcode",
-    href: "https://www.bmcode.com.br/",
-  },
-  {
-    id: 4,
-    image: "/taskmanagerlogo.png",
-    alt: "Task Manager",
-    href: "https://www.taskmenager.com.br/",
-  },
-  {
-    id: 5,
-    image: "/financialcontrollogo.png",
-    alt: "Financial Control",
-    href: "https://www.financialcontrol.com.br/",
-  },
-  {
-    id: 6,
-    image: "/korivologo.png",
-    alt: "Korivo Sistema",
-    href: "https://www.korivo.com.br/",
-  },
-];
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function ClientsHome() {
+  useEffect(() => {
+    Aos.init({
+      duration: 700,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
+  const solutions = [
+    {
+      id: 1,
+      image: "/medalbrazil.png",
+      alt: "Medalhas Brasil",
+      href: "https://www.medalhasbrasil.com/",
+    },
+    {
+      id: 2,
+      image: "/visiologo.png",
+      alt: "Ótica VisioCorp",
+      href: "https://www.visiocorp.com/",
+    },
+    {
+      id: 3,
+      image: "/bmcodelogo.png",
+      alt: "BMcode",
+      href: "https://www.bmcode.com.br/",
+    },
+    {
+      id: 4,
+      image: "/taskmanagerlogo.png",
+      alt: "Task Manager",
+      href: "https://www.taskmenager.com.br/",
+    },
+    {
+      id: 5,
+      image: "/financialcontrollogo.png",
+      alt: "Financial Control",
+      href: "https://www.financialcontrol.com.br/",
+    },
+    {
+      id: 6,
+      image: "/korivologo.jpeg",
+      alt: "Korivo Sistema",
+      href: "https://www.korivo.com.br/",
+    },
+  ];
+
   return (
-    <section className="w-full min-h-screen flex bg-balck px-16 py-20 max-md:px-6 max-md:py-14">
-      <div className="max-w-6xl mx-auto flex items-center gap-18 max-md:flex-col max-md:gap-12">
+    <section className="relative w-full min-h-screen flex bg-balck px-16 py-20 max-md:px-6 max-md:py-14">
+   
+      <div
+        className="max-w-4xl mx-auto flex items-center gap-18 max-md:flex-col max-md:gap-12"
+        data-aos="fade-right"
+        data-aos-duration="800"
+      >
         <div className="flex-1 min-w-0">
           <span className="block font-syne text-[11px] font-bold tracking-[0.2em] uppercase text-blue opacity-80 mb-4">
             Clientes & Projetos
@@ -55,14 +71,18 @@ export default function ClientsHome() {
           <h1 className="font-syne font-extrabold text-[36px] leading-[1.1] text-white m-0 mb-5">
             Conheça alguns de nossos clientes e sistemas.
           </h1>
-          <p className="text-sm text-gray leading-[1.8] font-light m-0 max-w-sm">
+          <p className="text-lg text-gray leading-[1.8] font-light m-0 max-w-sm">
             Ao lado, você encontra empresas e sistemas para os quais entregamos
             soluções tecnológicas com excelência.
           </p>
         </div>
 
         {/* Right: carrossel */}
-        <div className="w-86 max-md:w-full shrink-0">
+        <div
+          className="w-86 max-md:w-full shrink-0"
+          data-aos="fade-left"
+          data-aos-duration="800"
+        >
           <div className="bg-[#141414] border border-blue/10 rounded-xl overflow-hidden">
             <Swiper
               modules={[Autoplay, Navigation, Pagination]}
@@ -127,6 +147,13 @@ export default function ClientsHome() {
           </div>
         </div>
       </div>
+
+         <div className="absolute left-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-3">
+        <div className="w-px h-24 bg-blue/40" />
+        <div className="w-1.5 h-1.5 rounded-full bg-blue" />
+        <div className="w-px h-24 bg-blue/40" />
+      </div>
+
     </section>
   );
 }
