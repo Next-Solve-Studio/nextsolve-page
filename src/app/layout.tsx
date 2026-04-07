@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import Header from "@/layout/header/Header";
+import Footer from "@/layout/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "NextSolve - WebSite Official",
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="pt-BR" className={``}>
       <Header />
       <body className="min-h-full flex flex-col">{children}</body>
+      <Footer />
     </html>
   );
 }
