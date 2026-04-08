@@ -15,16 +15,12 @@ export default function AboutHome() {
 
   return (
     <section className="relative w-full min-h-screen bg-black px-16 py-24 overflow-hidden flex items-center">
-      {/* Fundo com textura sutil e efeitos escuros */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,100,255,0.04),transparent_60%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(255,255,255,0.01),transparent_70%)]" />
-      
     
-      {/* Orbes escuras com toque minimal de azul */}
       <div className="absolute top-1/4 -right-32 w-96 h-96 bg-blue rounded-full blur-[150px] opacity-[0.02]" />
       <div className="absolute bottom-1/4 -left-32 w-80 h-80 bg-white rounded-full blur-[150px] opacity-[0.01]" />
       
-      {/* Linhas decorativas sutis */}
       <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-blue/10 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/5 to-transparent" />
 
@@ -34,7 +30,7 @@ export default function AboutHome() {
             Quem somos
             <span className="absolute -bottom-1 left-0 w-8 h-px bg-blue/30" />
           </span>
-          <h1 className="font-syne font-extrabold text-[52px] leading-[1.05] text-white m-0 bg-linear-to-r from-white via-white to-gray-500 bg-clip-text text-white">
+          <h1 className="font-syne font-extrabold text-[52px] leading-[1.05] text-white m-0 bg-linear-to-r from-white via-white to-gray-500 bg-clip-text  q">
             NextSolve Studio Vision
           </h1>
         </div>

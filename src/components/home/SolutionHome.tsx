@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,8 +18,6 @@ export default function ClientsHome() {
       once: true,
     });
   }, []);
-
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const solutions = [
     {

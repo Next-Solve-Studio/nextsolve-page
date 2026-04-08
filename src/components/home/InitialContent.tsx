@@ -33,20 +33,16 @@ export default function InitialContent() {
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center px-6 md:px-10 overflow-hidden bg-black">
-      {/* Fundo com textura sutil e efeitos escuros */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,100,255,0.06),transparent_60%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(255,255,255,0.02),transparent_70%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_40%,rgba(0,100,255,0.02)_50%,transparent_60%)]" />
       
-      {/* Textura de grid muito sutil */}
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-size-[60px_60px]" />
       
-      {/* Orbes escuras com toque minimal de azul */}
       <div className="absolute top-1/3 -left-32 w-80 h-80 bg-blue rounded-full blur-[150px] opacity-[0.03]" />
       <div className="absolute bottom-1/3 -right-32 w-96 h-96 bg-white rounded-full blur-[150px] opacity-[0.02]" />
       
-      {/* Linha decorativa superior sutil */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue/20 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-blue/20 to-transparent" />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 max-w-7xl w-full items-center relative z-10 max-[748px]:py-30">
         <div
@@ -57,7 +53,7 @@ export default function InitialContent() {
           <div className="absolute -inset-4 bg-blue/5 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
           <div className="relative rounded-2xl lg:rounded-3xl overflow-hidden bg-white/5 shadow-2xl shadow-black/50">
-            <div className="absolute inset-0 rounded-2xl lg:rounded-3xl p-[1px] bg-linear-to-r from-white/10 via-blue/20 to-white/5 opacity-50 group-hover:opacity-100 transition-opacity duration-700">
+            <div className="absolute inset-0 rounded-2xl lg:rounded-3xl p-px bg-linear-to-r from-white/10 via-blue/20 to-white/5 opacity-50 group-hover:opacity-100 transition-opacity duration-700">
               <div className="absolute inset-0 rounded-2xl lg:rounded-3xl bg-black" />
             </div>
 
@@ -86,7 +82,6 @@ export default function InitialContent() {
               ))}
             </Swiper>
             
-            {/* Overlay escuro no carrossel */}
             <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-black/10 pointer-events-none" />
           </div>
         </div>
@@ -143,8 +138,6 @@ export default function InitialContent() {
           </div>
         </div>
       </div>
-      
-      {/* Scroll indicator escuro */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 opacity-40 hover:opacity-100 transition-opacity duration-300 cursor-pointer">
         <span className="text-[10px] text-gray-600 tracking-[0.2em]">SCROLL</span>
         <div className="w-5 h-8 border border-white/10 rounded-full flex justify-center">
