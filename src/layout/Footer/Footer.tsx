@@ -39,12 +39,8 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_auto_auto] gap-10 lg:gap-16">
           <div className="flex flex-col gap-3">
-            <h1 className="text-4xl font-black tracking-tight text-white">
-              Next<span className="text-blue">Solve</span>
-            </h1>
-            <p className="text-sm text-gray max-w-55 leading-relaxed">
-              Soluções inteligentes para o crescimento do seu negócio.
-            </p>
+            <h1 className="text-4xl font-black tracking-tight text-white">Next<span className="text-blue">Solve</span></h1>
+            <p className="text-sm text-gray max-w-55 leading-relaxed">Soluções inteligentes para o crescimento do seu negócio.</p>
           </div>
 
           <FooterColumn title="Institucional">
@@ -81,12 +77,8 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-2 border-t border-white/5">
-          <p className="text-[11.5px] text-white/25">
-            © 2026 NextSolve Studio Vision. Todos os direitos reservados
-          </p>
-          <p className="text-[11.5px] text-white/15">
-            CNPJ: 62.004.128/0001-80
-          </p>
+          <p className="text-[11.5px] text-white/25">© 2026 NextSolve Studio Vision. Todos os direitos reservados</p>
+          <p className="text-[11.5px] text-white/15">CNPJ: 62.004.128/0001-80</p>
         </div>
       </div>
     </footer>
@@ -118,10 +110,7 @@ function FooterLink({
   children: React.ReactNode;
 }) {
   return (
-    <Link
-      href={href}
-      className="text-sm text-gray hover:text-blue-400 transition-colors"
->
+    <Link href={href} className="text-sm text-gray hover:text-blue-400 transition-colors">
       {children}
     </Link>
   );
