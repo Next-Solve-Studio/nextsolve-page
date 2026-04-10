@@ -87,7 +87,7 @@ export default function AboutHome() {
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2 flex justify-center" data-aos="zoom-in-up" data-aos-delay="400">
+          <div className="w-full lg:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="300">
             <div className="relative group">
 
               <div className="absolute -inset-1 bg-linear-to-r from-blue-600 to-cyan-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
