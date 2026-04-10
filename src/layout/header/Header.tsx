@@ -29,12 +29,11 @@ export default function Header() {
       className={`fixed top-0 w-full h-20 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-black/80 backdrop-blur-md shadow-lg"
-          : "bg-black"
+          : "bg-transparent"
       }`}
     >
       <section className="max-w-7xl mx-auto flex items-center justify-between h-full px-6 md:px-10 lg:px-16">
         
-        {/* ESQUERDA */}
         <div className="flex items-center gap-6">
           <Title />
 
@@ -43,7 +42,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* DIREITA */}
         <div className="flex items-center gap-4">
           <div className="hidden md:flex">
             <Buttons />
