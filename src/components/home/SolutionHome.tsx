@@ -28,7 +28,7 @@ export default function ClientsHome() {
   ];
 
   return (
-    <section className="relative w-full min-h-screen bg-black overflow-hidden px-6 py-28 lg:px-16">
+    <section className="relative w-full min-h-screen bg-[#050505] overflow-hidden px-6 py-28 lg:px-16">
 
       {/* BACKGROUND ELEMENTS */}
       <div className="absolute inset-0 z-0">

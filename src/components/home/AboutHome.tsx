@@ -18,15 +18,11 @@ export default function AboutHome() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen bg-black text-white px-6 md:px-16 py-24 overflow-hidden flex items-center">
+    <section className="relative w-full min-h-screen bg-[#050505] text-white px-6 md:px-16 py-24 overflow-hidden flex items-center">
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-500/10 blur-[120px]" />
+        <div className="absolute top-[2%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-500/10 blur-[120px]" />
 
       </div>
-
-      {/*  <div className="absolute inset-0 z-0 opacity-10">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#888_1px,transparent_1px),linear-gradient(to_bottom,#888_1px,transparent_1px)] bg-size-[40px_40px]" />
-        </div> */}
 
       <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-7xl mx-auto">
 

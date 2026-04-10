@@ -60,7 +60,7 @@ export default function Service() {
   ];
 
   return (
-    <section className="relative w-full min-h-screen bg-black px-6 md:px-16 py-24 overflow-hidden">
+    <section className="relative w-full min-h-screen bg-[#050505] px-6 md:px-16 py-24 overflow-hidden">
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none z-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-blue-500/5 rounded-full blur-[120px]" />

@@ -37,7 +37,7 @@ export default function InitialContent() {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center px-6 md:px-16 overflow-hidden bg-black">
+    <section className="relative w-full min-h-screen flex items-center justify-center px-6 md:px-16 overflow-hidden bg-[#050505]">
 
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 -left-[10%] w-[50%] h-[50%] rounded-full bg-blue-600/10 blur-[140px] animate-pulse" />
