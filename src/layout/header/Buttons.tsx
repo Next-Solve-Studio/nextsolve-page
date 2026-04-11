@@ -3,7 +3,7 @@ import { AiOutlineGlobal } from "react-icons/ai";
 
 export default function Buttons() {
   const btnLinks = [
-    { id: 1, text: "Contato", href: "/", primary: true },
+    { id: 1, text: "Contato", href: "/contact", primary: true },
     { id: 2, text: "English", href: "/", icon: AiOutlineGlobal },
   ];
 
@@ -51,7 +51,6 @@ export default function Buttons() {
                   group
                 "
               >
-                {/* Shimmer no hover */}
                 <span
                   className="
                     pointer-events-none absolute inset-0 -translate-x-full

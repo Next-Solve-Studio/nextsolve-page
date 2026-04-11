@@ -58,7 +58,7 @@ export default function InitialInformation() {
                 <div data-aos="fade-up" data-aos-delay="600">
 
                     <Link
-                        href='/contato'
+                        href='/contact'
                         className="group relative inline-flex items-center gap-6 px-12 py-5 bg-transparent text-white font-bold rounded-full transition-all duration-500 overflow-hidden border border-white/10 hover:border-blue-500/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.3)]"
                     >
                         <div className="absolute inset-0 bg-linear-to-r from-blue-600/20 via-transparent to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -76,9 +76,7 @@ export default function InitialInformation() {
                             <FaArrowRightLong className="group-hover:translate-x-1 transition-transform duration-300" />
                         </div>
                         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-transparent via-blue-500 to-transparent group-hover:w-1/2 transition-all duration-500" />
-                    </Link>F
-
-
+                    </Link>
                 </div>
             </div>
 
