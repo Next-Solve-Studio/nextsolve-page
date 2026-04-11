@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { BiSolidMessageRounded } from "react-icons/bi"
 import { IoClose } from "react-icons/io5"
+import { FaWhatsapp } from "react-icons/fa"
 
 type Contact = {
     id: number;
@@ -27,45 +28,82 @@ export default function Messenger() {
                 setOpen(false);
             }
         }
-
-        if (open) {
-            document.addEventListener("mousedown", handleClickOutside)
-        }
-
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside)
-        }
+        if (open) document.addEventListener("mousedown", handleClickOutside)
+        return () => document.removeEventListener("mousedown", handleClickOutside)
     }, [open])
 
     return (
-        <div className="fixed bottom-6 right-6 z-50" ref={boxRef}>
+        // Container fixo - Garante que fique sempre no canto inferior direito
+        <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end" ref={boxRef}>
+
+            {/* Pop-up Estilizado */}
             {open && (
-                <div className="mb-4 w-72 rounded-2xl bg-darkGray text-white shadow-2xl p-5 border border-gray/20">
-                    <div className="flex justify-between items-center mb-4">
-                        <h3 className="font-semibold text-lg">Contato para Orçamentos</h3>
-                        <button type='button' onClick={() => setOpen(false)}>
-                            <IoClose size={22} />
+                <div
+                    className="mb-4 w-72 rounded-3xl bg-[#0D0D0D]/90 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden animate-in fade-in zoom-in duration-300 origin-bottom-right"
+                >
+                    {/* Header do Pop-up */}
+                    <div className="bg-blue-600 p-4 flex justify-between items-center">
+                        <div className="flex items-center gap-2 text-white">
+                            <FaWhatsapp size={20} />
+                            <span className="font-syne font-bold text-sm tracking-tighter">Orçamentos</span>
+                        </div>
+                        <button
+                            type='button'
+                            onClick={() => setOpen(false)}
+                            className="text-white/80 hover:text-white transition-colors"
+                        >
+                            <IoClose size={20} />
                         </button>
                     </div>
 
-                    <div className="flex flex-col gap-3">
+                    {/* Lista de Contatos */}
+                    <div className="p-4 flex flex-col gap-2">
                         {contacts.map((contact) => (
                             <Link
                                 key={contact.id}
                                 href={`https://wa.me/${contact.phone}`}
                                 target="_blank"
-                                className="bg-black hover:bg-green transition p-3 rounded-lg flex flex-col"
+                                className="group flex items-center justify-between p-3 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-blue-500/30 hover:bg-blue-500/10 transition-all duration-300"
                             >
-                                <span>{contact.name}</span>
-                                <span className="text-sm text-gray">{contact.label}</span>
+                                <div className="flex flex-col">
+                                    <span className="text-white font-bold text-sm">{contact.name}</span>
+                                    <span className="text-gray-500 text-[11px] font-mono group-hover:text-blue-400/80 transition-colors">
+                                        {contact.label}
+                                    </span>
+                                </div>
+                                <div className="w-8 h-8 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 group-hover:bg-green-500 group-hover:text-white transition-all">
+                                    <FaWhatsapp size={14} />
+                                </div>
                             </Link>
                         ))}
+                    </div>
+
+                    <div className="p-3 bg-white/[0.02] text-center">
+                        <p className="text-[9px] text-gray-600 uppercase tracking-[0.2em]">NextSolve Tech Support</p>
                     </div>
                 </div>
             )}
 
-            <button type='button' onClick={() => setOpen(!open)}>
-                <BiSolidMessageRounded size={40} className='text-blue' />
+            {/* Botão Principal com Efeito Sonar */}
+            <button
+                type='button'
+                onClick={() => setOpen(!open)}
+                className="relative group"
+            >
+                {/* Ondas de Pulsação */}
+                <span className="absolute inset-0 rounded-full bg-blue-500/40 animate-ping" />
+
+                {/* Corpo do Botão */}
+                <div className={`relative flex items-center justify-center w-16 h-16 rounded-full shadow-lg transition-all duration-500 ${open ? 'bg-white rotate-90' : 'bg-blue-600 hover:scale-110'}`}>
+                    {open ? (
+                        <IoClose size={30} className="text-black" />
+                    ) : (
+                        <BiSolidMessageRounded size={30} className="text-white" />
+                    )}
+                </div>
+                {!open && (
+                    <span className="absolute top-0 right-0 w-4 h-4 bg-red-500 border-2 border-[#050505] rounded-full" />
+                )}
             </button>
         </div>
     )
