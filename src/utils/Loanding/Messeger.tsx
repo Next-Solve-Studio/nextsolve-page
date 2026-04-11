@@ -33,7 +33,7 @@ export default function Messenger() {
     }, [open])
 
     return (
-        <div className="fixed bottom-6 right-6 z-9999 flex flex-col items-end" ref={boxRef}>
+        <div className="fixed bottom-6 right-6 z-9996 flex flex-col items-end" ref={boxRef}>
             {open && (
                 <div className="mb-4 w-72 rounded-3xl bg-black/90 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden animate-in fade-in zoom-in duration-300 origin-bottom-right">
                     <div className="bg-blue-600 p-4 flex justify-between items-center">
