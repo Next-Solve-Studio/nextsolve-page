@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { FiCpu, FiGlobe, FiLayers } from "react-icons/fi"; // Exemplos de ícones
+import { FiCpu, FiGlobe, FiLayers } from "react-icons/fi"; 
 import { FcStatistics } from "react-icons/fc";
 import { MdAssessment } from "react-icons/md";
 

@@ -1,7 +1,9 @@
-
+import AboutMain from "@/components/About/AboutMain"
 
 export default function page() {
     return (
-        <div>page</div>
+        <section className="">
+            <AboutMain />
+        </section>
     )
 }
