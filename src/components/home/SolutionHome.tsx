@@ -20,7 +20,7 @@ export default function ClientsHome() {
 
   const solutions = [
     { id: 1, image: "/medalbrazil.png", alt: "Medalhas Brasil", href: "https://www.medalhasbrasil.com/", category: "E-commerce" },
-    { id: 2, image: "/visiologo.png", alt: "Ótica VisioCorp", href: "https://visio-corp.vercel.app/", category: "Soluções Ópticas" },
+    { id: 2, image: "/visiologo.png", alt: "Ótica VisioCorp", href: "https://visiocorp.com.br/", category: "Soluções Ópticas" },
     /* { id: 4, image: "/taskmanagerlogo.png", alt: "Task Manager", href: "https://www.taskmenager.com.br/", category: "Produtividade" }, */
     { id: 5, image: "/financialcontrollogo.png", alt: "Financial Control", href: "https://meu-controle-financeiro-web.vercel.app/", category: "Finanças" },
     { id: 6, image: "/korivologo.jpeg", alt: "Korivo Sistema", href: "https://korivo.vercel.app/", category: "Gestão Empresarial" },
