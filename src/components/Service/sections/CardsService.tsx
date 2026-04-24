@@ -21,43 +21,28 @@ export default function CardsService() {
     return (
         <section className="relative w-full py-20 bg-[#050505] px-6 overflow-hidden">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-
-                {/* Lado Esquerdo: Cards de Serviços (6 colunas) */}
                 <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4" data-aos="fade-right">
                     {services.map((item) => (
-                        <div
-                            key={item.id}
-                            className="group relative p-6 bg-white/[0.02] border border-white/5 rounded-2xl hover:border-blue-500/30 transition-all duration-500 hover:bg-white/[0.04]"
-                        >
+                        <div key={item.id} className="group relative p-6 bg-white/2 border border-white/5 rounded-2xl hover:border-blue-500/30 transition-all duration-500 hover:bg-white/4">
                             <div className="flex items-center gap-4">
                                 <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-xl text-blue-500 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all">
                                     {item.icon}
                                 </div>
-                                <h3 className="font-syne font-bold text-white text-sm uppercase tracking-widest leading-tight">
-                                    {item.title}
-                                </h3>
+                                <h3 className="font-syne font-bold text-white text-sm uppercase tracking-widest leading-tight">{item.title}</h3>
                             </div>
 
-                            {/* Detalhe estético de "id" do serviço */}
-                            <span className="absolute top-4 right-6 font-mono text-[9px] text-gray-700 group-hover:text-blue-900 transition-colors">
-                                MOD_0{item.id}
-                            </span>
+                            <span className="absolute top-4 right-6 font-mono text-[9px] text-gray-700 group-hover:text-blue-900 transition-colors">MOD_0{item.id}</span>
                         </div>
                     ))}
-
-                    {/* Card de CTA rápido no final do grid */}
-                    <div className="p-6 rounded-2xl border border-dashed border-blue-500/20 flex items-center justify-center bg-blue-500/[0.01]">
+                    <div className="p-6 rounded-2xl border border-dashed border-blue-500/20 flex items-center justify-center bg-blue-500/1">
                         <p className="text-[10px] font-mono text-blue-500/60 uppercase tracking-[0.2em]">Ready for Deployment_</p>
                     </div>
                 </div>
 
-                {/* Lado Direito: Texto Explicativo (5 colunas) */}
                 <div className="lg:col-span-5 flex flex-col" data-aos="fade-left" data-aos-delay="200">
                     <div className="flex items-center gap-3 mb-6">
                         <div className="w-8 h-px bg-blue-500/50" />
-                        <span className="font-syne text-[11px] font-black tracking-[0.4em] uppercase text-blue-400">
-                            Operação e Entrega
-                        </span>
+                        <span className="font-syne text-[11px] font-black tracking-[0.4em] uppercase text-blue-400">Operação e Entrega</span>
                     </div>
 
                     <h2 className="font-syne font-black text-3xl md:text-4xl text-white mb-8 leading-tight">
@@ -82,16 +67,11 @@ export default function CardsService() {
                             focados em inovação, eficiência e segurança de dados.
                         </p>
                     </div>
-
-                    <Link
-                        href='/contact'
-                        className="group mt-10 inline-flex items-center gap-4 bg-white text-black px-8 py-4 rounded-full font-syne font-black text-xs uppercase tracking-widest hover:bg-blue-600 hover:text-white transition-all duration-500 shadow-xl"
-                    >
+                    <Link href='/contact' className="group mt-10 inline-flex items-center gap-4 bg-white text-black px-8 py-4 rounded-full font-syne font-black text-xs uppercase tracking-widest hover:bg-blue-600 hover:text-white transition-all duration-500 shadow-xl">
                         Falar com um Especialista
                         <FiArrowRight className="group-hover:translate-x-2 transition-transform" />
                     </Link>
                 </div>
-
             </div>
         </section>
     );
