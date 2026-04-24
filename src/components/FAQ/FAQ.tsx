@@ -64,7 +64,7 @@ export default function FAQSession() {
 
                 <div className="space-y-4" data-aos="fade-up" data-aos-delay="200">
                     {faqs.map((faq, index) => (
-                        <div key={faq.id} className={`border rounded-2xl transition-all duration-500 ${openIndex === index ? "border-blue-500/40 bg-white/4" : "border-white/5 bg-white/1 hover:border-white/20"}`}>
+                        <div key={faq.id} className={`border rounded-2xl transition-[max-height,opacity] duration-300 ${openIndex === index ? "border-blue-500/40 bg-white/4" : "border-white/5 bg-white/1 hover:border-white/20"}`}>
                             <button type="button" onClick={() => setOpenIndex(openIndex === index ? null : index)} className="w-full flex items-center justify-between p-6 text-left">
                                 <div className="flex items-center gap-4">
                                     <FiTerminal
