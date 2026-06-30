@@ -51,7 +51,7 @@ export default function InitialAbout() {
               <Image
                 height={500}
                 width={600}
-                src='/logo.jpeg'
+                src='/logos/logo.jpeg'
                 alt="Logo NextSolve"
                 className="object-cover transform group-hover:scale-105 transition-transform duration-700 grayscale-[0.5] group-hover:grayscale-0"
               />

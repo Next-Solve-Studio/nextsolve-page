@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   authors: [{ name: "NextSolve" }],
 
   icons: {
-    icon: "/logo.png",
+    icon: "/logos/logo.png",
   },
 
   openGraph: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "NextSolve",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/logos/logo.png",
         width: 1200,
         height: 630,
       },
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-}; 
+};
 
 export default function RootLayout({
   children,

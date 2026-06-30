@@ -24,9 +24,9 @@ export default function InitialContent() {
   ];
 
   const images = [
-    { id: 1, src: "/slide-01.png", alt: "Slide 1" },
-    { id: 2, src: "/slide-02.png", alt: "Slide 2" },
-    { id: 3, src: "/slide-03.png", alt: "Slide 3" },
+    { id: 1, src: "/Ilustrative/slide-01.png", alt: "Slide 1" },
+    { id: 2, src: "/Ilustrative/slide-02.png", alt: "Slide 2" },
+    { id: 3, src: "/Ilustrative/slide-03.png", alt: "Slide 3" },
   ];
 
   const content = {
