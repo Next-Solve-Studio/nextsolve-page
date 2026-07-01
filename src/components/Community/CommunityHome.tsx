@@ -73,7 +73,7 @@ export default function CommunityHome() {
 
               <div className="pt-4 flex justify-center lg:justify-start">
                 <Link
-                  href="/community"
+                  href="https://chat.whatsapp.com/IdD1UPQBtkYJJDvJL7zXmy?s=cl&p=i&mlu=0&ilr=0"
                   className="group inline-flex items-center gap-3 text-white font-syne text-sm font-bold tracking-wider"
                 >
                   <span className="relative">

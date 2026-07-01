@@ -18,7 +18,7 @@ export default function Footer() {
     { id: 1, label: "Corporativo", href: "/" },
     { id: 2, label: "Política de Privacidade", href: "/" },
     { id: 3, label: "Agente de IA", href: "/" },
-    { id: 4, label: "Comunidade", href: "/" },
+    { id: 4, label: "Comunidade", href: "/Community" },
   ];
 
   const contact: LinkItem[] = [
