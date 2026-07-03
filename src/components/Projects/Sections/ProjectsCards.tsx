@@ -7,7 +7,6 @@ import "aos/dist/aos.css";
 import { FiArrowUpRight, FiLayers } from "react-icons/fi";
 
 export default function ProjectsCards() {
-    // Estado para armazenar a categoria selecionada (Inicia mostrando todos)
     const [activeFilter, setActiveFilter] = useState<string>("Todos");
 
     useEffect(() => {
@@ -23,7 +22,7 @@ export default function ProjectsCards() {
         image: string;
         alt: string;
         href: string;
-        category: "Páginas Web" | "Sistemas" | "E-commerce"; // Categorias unificadas
+        category: "Páginas Web" | "Sistemas" | "E-commerce"; 
         title: string;
         description: string;
     };
