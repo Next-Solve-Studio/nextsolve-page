@@ -159,7 +159,7 @@ export default function ClientsHome() {
 
                 <div className="mt-6 pt-4 border-t border-white/3 flex items-center justify-between text-gray-600 group-hover:text-blue-500/80 transition-colors">
                   <span className="font-mono text-[9px] tracking-widest uppercase">
-                    DEPLOYED // 0{item.id}
+                    DEPLOYED / 0{item.id}
                   </span>
                   <span className="text-xs group-hover:translate-x-1 transition-transform duration-300">
                     →

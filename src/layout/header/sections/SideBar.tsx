@@ -49,7 +49,7 @@ export default function Sidebar() {
   const mainLinks = [
     { id: 1, label: "Quem Somos", href: "/About" },
     { id: 2, label: "Serviços", href: "/Service" },
-    { id: 3, label: "Soluções", href: "/companies" },
+    { id: 3, label: "Projetos", href: "/Projects" },
     { id: 4, label: "Blog", href: "/Blog" },
   ];
 

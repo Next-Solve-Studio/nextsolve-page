@@ -17,7 +17,7 @@ export default function Navigation() {
       ],
       icon: SlArrowDown,
     },
-    { id: 3, text: "Soluções", href: "#Solutions" },
+    { id: 3, text: "Projetos", href: "/Projects" },
     { id: 4, text: "Blog", href: "/Blog" },
   ];
 

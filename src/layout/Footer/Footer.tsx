@@ -16,7 +16,7 @@ type SocialItem = LinkItem & {
 export default function Footer() {
   const institutional: LinkItem[] = [
     { id: 1, label: "Corporativo", href: "/" },
-    { id: 2, label: "Política de Privacidade", href: "/" },
+    { id: 2, label: "Política de Privacidade", href: "/Policy" },
     { id: 3, label: "Agente de IA", href: "/" },
     { id: 4, label: "Comunidade", href: "/Community" },
   ];
