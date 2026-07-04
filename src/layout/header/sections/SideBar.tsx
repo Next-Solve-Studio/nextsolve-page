@@ -50,7 +50,7 @@ export default function Sidebar() {
     { id: 1, label: "Quem Somos", href: "/About" },
     { id: 2, label: "Serviços", href: "/Service" },
     { id: 3, label: "Projetos", href: "/Projects" },
-    { id: 4, label: "Blog", href: "/Blog" },
+    { id: 4, label: "Processos", href: "/Processes" },
   ];
 
   const [mounted, setMounted] = useState(false);
