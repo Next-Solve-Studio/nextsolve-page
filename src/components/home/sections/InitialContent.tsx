@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
+import "swiper/css/effect-fade";
 import { FiArrowUpRight, FiZap, FiCheckCircle } from "react-icons/fi";
 import "swiper/css";
 
@@ -59,8 +60,12 @@ export default function InitialContent() {
               <Swiper
                 modules={[Autoplay, EffectFade]}
                 effect="fade"
-                autoplay={{ delay: 2000, disableOnInteraction: true }}
-                loop
+                loop={true}
+                autoplay={{
+                  delay: 2000,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: false,
+                }}
                 className="w-full aspect-4/3 lg:aspect-square"
               >
                 {images.map((img) => (
