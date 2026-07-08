@@ -150,7 +150,6 @@ export default function InitialContent() {
           Explore
         </span>
       </div>
-
     </section>
   );
 }
