@@ -24,7 +24,7 @@ export default function ContentServiceInitial() {
                         <div className="overflow-hidden rounded-[1.3rem] md:rounded-4xl border border-white/10 relative">
                             <div className="absolute inset-0 bg-linear-to-b from-blue-500/10 to-transparent h-1/2 w-full z-10 animate-scanline pointer-events-none" />
                             <Image
-                                src="/solution3.png"
+                                src="/Ilustrative/solution3.png"
                                 alt="NextSolve Solutions"
                                 width={650}
                                 height={450}
