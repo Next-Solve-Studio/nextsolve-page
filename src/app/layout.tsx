@@ -5,6 +5,8 @@ import Header from "@/layout/header/Header";
 import Messenger from "@/layout/Messeger/Messeger";
 import Footer from "@/layout/Footer/Footer";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 
 export const metadata: Metadata = {
   title: "NextSolve | Desenvolvimento de Sistemas e Soluções Tecnológicas",
@@ -56,11 +58,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={``}>
-      <Header />
-      <Messenger />
-      <body className="min-h-full flex flex-col">{children}</body>
-      <Footer />
+    <html lang="pt-BR">
+      <body className="min-h-full flex flex-col">
+        <Header />
+        <Messenger />
+        {children}
+        <Footer />
+      </body>
+
+      <GoogleAnalytics
+        gaId={process.env.NEXT_PUBLIC_GA_ID!}
+      />
     </html>
   );
 }
