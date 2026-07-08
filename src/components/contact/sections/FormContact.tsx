@@ -3,9 +3,6 @@ import { useForm } from 'react-hook-form'
 import z from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { FiMail } from 'react-icons/fi'
-import { useEffect } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 import emailjs from '@emailjs/browser'
 
 const schema = z.object({
@@ -19,10 +16,6 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>
 
 export default function FormContact() {
-
-    useEffect(() => {
-        Aos.init({ duration: 1000, once: true })
-    }, [])
 
     const {
         register,
@@ -66,7 +59,7 @@ export default function FormContact() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 bg-blue-600/5 rounded-full blur-[150px] pointer-events-none" />
 
             <div className='max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10'>
-                <div data-aos="fade-right">
+                <div>
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 mb-6">
                         <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
                         <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-blue-400">Canal Direto</span>
@@ -85,7 +78,7 @@ export default function FormContact() {
                     </div>
                 </div>
 
-                <div data-aos="fade-left" className="relative">
+                <div className="relative">
                     <div className="absolute -inset-1 bg-linear-to-r from-blue-600/20 to-purple-600/20 rounded-3xl blur opacity-30"></div>
 
                     <form onSubmit={handleSubmit(onSubmit)} className="relative bg-black border border-white/10 p-8 md:p-10 rounded-3xl space-y-6">

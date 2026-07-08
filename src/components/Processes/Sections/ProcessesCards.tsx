@@ -1,17 +1,8 @@
-"use client";
-import { useEffect } from "react";
 import { IconType } from "react-icons";
 import { FiSearch, FiCompass, FiCpu, FiTrendingUp } from "react-icons/fi";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
 
-import Aos from "aos";
-import "aos/dist/aos.css";
-
 export default function ProcessesCards() {
-    useEffect(() => {
-        Aos.init({ duration: 1000, once: true });
-    }, []);
-
     type CardsItem = {
         id: number;
         step: string;
@@ -68,7 +59,7 @@ export default function ProcessesCards() {
 
             <div className="relative z-10 max-w-360 mx-auto">
 
-                <div className="text-center mb-16 md:mb-24 flex flex-col items-center justify-center" data-aos="fade-up">
+                <div className="text-center mb-16 md:mb-24 flex flex-col items-center justify-center" >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/10 bg-blue-500/5 mb-4 font-mono text-[10px] uppercase tracking-widest text-blue-400">
                         Pipeline de Engenharia
                     </div>
@@ -84,8 +75,7 @@ export default function ProcessesCards() {
                     {cards.map((item, index) => {
                         const IconComponent = item.icon;
                         return (
-                            <div key={item.id} data-aos="fade-up"
-                                data-aos-delay={index * 100} className="group relative bg-white/1 border border-white/5 rounded-3xl p-6 flex flex-col justify-between items-start text-left hover:border-blue-500/20 hover:bg-white/2 transition-all duration-500 min-h-80 overflow-hidden">
+                            <div key={item.id} className="group relative bg-white/1 border border-white/5 rounded-3xl p-6 flex flex-col justify-between items-start text-left hover:border-blue-500/20 hover:bg-white/2 transition-all duration-500 min-h-80 overflow-hidden">
 
                                 <div className="absolute bottom-0 left-0 w-full h-0.5 bg-linear-to-r from-transparent via-blue-500/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
 

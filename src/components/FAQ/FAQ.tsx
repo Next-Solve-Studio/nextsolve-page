@@ -1,16 +1,10 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { FiPlus, FiMinus, FiHelpCircle, FiTerminal } from "react-icons/fi";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export default function FAQSession() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-    useEffect(() => {
-        Aos.init({ duration: 1000, once: true });
-    }, []);
 
     const faqs = [
         {
@@ -47,7 +41,7 @@ export default function FAQSession() {
 
             <div className="max-w-4xl mx-auto relative z-10">
 
-                <div className="text-center mb-16" data-aos="fade-up">
+                <div className="text-center mb-16">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 mb-6">
                         <FiHelpCircle className="text-blue-500 text-xs" />
                         <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-blue-400 font-syne">
@@ -62,7 +56,7 @@ export default function FAQSession() {
                     </p>
                 </div>
 
-                <div className="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                <div className="space-y-4">
                     {faqs.map((faq, index) => (
                         <div key={faq.id} className={`border rounded-2xl transition-[max-height,opacity] duration-300 ${openIndex === index ? "border-blue-500/40 bg-white/4" : "border-white/5 bg-white/1 hover:border-white/20"}`}>
                             <button type="button" onClick={() => setOpenIndex(openIndex === index ? null : index)} className="w-full flex items-center justify-between p-6 text-left">
@@ -89,7 +83,7 @@ export default function FAQSession() {
                         </div>
                     ))}
                 </div>
-                <div className="mt-12 text-center" data-aos="zoom-in">
+                <div className="mt-12 text-center">
                     <p className="text-gray-600 text-xs font-mono mb-6 uppercase tracking-widest">Ainda tem perguntas?_</p>
                     <Link href="/Contact" className="text-blue-500 font-syne font-black text-sm uppercase tracking-[0.2em] hover:text-white transition-colors">
                         Consulte nossa equipe técnica →

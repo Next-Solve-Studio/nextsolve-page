@@ -1,22 +1,13 @@
 "use client";
-import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import { FiArrowUpRight, FiZap, FiCheckCircle } from "react-icons/fi";
 import "swiper/css";
 
 export default function InitialContent() {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-      easing: "ease-out-quart",
-      once: true,
-    });
-  }, []);
+
 
   const start = [
     { id: 11, label: "Projetos", value: "100+", icon: <FiCheckCircle className="text-blue-500" /> },
@@ -55,11 +46,7 @@ export default function InitialContent() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-7xl w-full items-center relative z-10 py-20">
 
-        <div
-          data-aos="zoom-in-left"
-          data-aos-delay="200"
-          className="relative order-1 lg:order-2 sm:hover"
-        >
+        <div className="relative order-1 lg:order-2 sm:hover">
           <div className="relative rounded-4xl p-3 bg-white/3 border border-white/10 backdrop-blur-sm shadow-2xl">
 
             <div className="absolute top-6 right-8 z-20 flex gap-1.5">
@@ -72,7 +59,7 @@ export default function InitialContent() {
               <Swiper
                 modules={[Autoplay, EffectFade]}
                 effect="fade"
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                autoplay={{ delay: 2000, disableOnInteraction: true }}
                 loop
                 className="w-full aspect-4/3 lg:aspect-square"
               >
@@ -96,7 +83,7 @@ export default function InitialContent() {
           <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
         </div>
 
-        <div data-aos="fade-right" className="flex flex-col gap-8 order-2 lg:order-1 text-center lg:text-left sm:hover">
+        <div className="flex flex-col gap-8 order-2 lg:order-1 text-center lg:text-left sm:hover">
           <div className="inline-flex items-center gap-2 w-fit mx-auto lg:mx-0 px-4 py-1.5 rounded-full bg-blue-500/5 border border-blue-500/20 backdrop-blur-md">
             <FiZap className="text-blue-400 text-sm animate-bounce" />
             <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-blue-400">

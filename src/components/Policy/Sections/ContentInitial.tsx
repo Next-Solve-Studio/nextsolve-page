@@ -1,14 +1,8 @@
 "use client";
-import { useEffect } from "react";
 import Image from "next/image";
 import { FiShield, FiLock } from "react-icons/fi";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export default function ContentInitial() {
-    useEffect(() => {
-        Aos.init({ duration: 1000, once: true });
-    }, []);
 
     return (
         <section className="flex items-center justify-center relative w-full min-h-screen py-20 md:py-28 bg-[#050505] overflow-hidden px-6 border-b border-white/5">
@@ -19,10 +13,7 @@ export default function ContentInitial() {
 
             <div className="max-w-6xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-4 items-center">
 
-                <div
-                    className="text-center lg:text-left order-2 lg:order-1"
-                    data-aos="fade-right"
-                >
+                <div className="text-center lg:text-left order-2 lg:order-1">
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/5 mb-6">
                         <FiShield className="text-blue-500 text-xs animate-pulse" />
                         <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-blue-400 font-syne">
@@ -54,11 +45,7 @@ export default function ContentInitial() {
                     </div>
                 </div>
 
-                <div
-                    className="flex justify-center lg:justify-center relative order-1 lg:order-2"
-                    data-aos="fade-left"
-                    data-aos-delay="200"
-                >
+                <div className="flex justify-center lg:justify-center relative order-1 lg:order-2">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
                     <div className="relative p-8 md:p-12 rounded-[2.5rem] bg-white/1 border border-white/5 backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:border-white/10 transition-all duration-500 group">

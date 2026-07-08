@@ -1,19 +1,10 @@
 "use client";
-import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { FiArrowUpRight, FiLayers } from "react-icons/fi";
 
 export default function ClientsHome() {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-    });
-  }, []);
+
 
   type SolutionsCards = {
     id: number;
@@ -93,7 +84,7 @@ export default function ClientsHome() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
 
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-16 md:mb-24" data-aos="fade-up">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-16 md:mb-24">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-3 md:mb-4">
               <span className="w-10 md:w-12 h-px bg-blue-500" />
@@ -121,8 +112,6 @@ export default function ClientsHome() {
               key={item.id}
               href={item.href}
               target="_blank"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
               className="group relative flex flex-col bg-white/1 border border-white/5 rounded-4xl overflow-hidden hover:border-blue-500/30 hover:bg-white/2 transition-all duration-500"
             >
               <div className="relative h-56 w-full overflow-hidden bg-white/2 border-b border-white/5">

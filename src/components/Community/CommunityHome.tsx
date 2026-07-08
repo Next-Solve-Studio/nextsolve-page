@@ -1,14 +1,8 @@
 "use client";
-import { useEffect } from "react";
 import Link from "next/link";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { FiCode, FiArrowRight } from "react-icons/fi";
 
 export default function CommunityHome() {
-  useEffect(() => {
-    Aos.init({ duration: 1000, easing: "ease-out-quart", once: true });
-  }, []);
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center bg-[#050505] px-6 md:px-12">
@@ -16,10 +10,7 @@ export default function CommunityHome() {
 
       <div className=" max-w-5xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
 
-        <div
-          className="lg:col-span-5 space-y-8 text-center lg:text-left"
-          data-aos="fade-right"
-        >
+        <div className="lg:col-span-5 space-y-8 text-center lg:text-left">
           <div>
             <span className="inline-block font-syne text-[10px] font-bold tracking-[0.3em] uppercase text-blue-500 mb-4 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
               Ecossistema Dev
@@ -46,11 +37,7 @@ export default function CommunityHome() {
           </div>
         </div>
 
-        <div
-          className="lg:col-span-7 text-center lg:text-left"
-          data-aos="fade-left"
-          data-aos-delay="200"
-        >
+        <div className="lg:col-span-7 text-center lg:text-left">
           <div className="relative pl-0 lg:pl-12 border-l-0 lg:border-l border-white/10 group">
 
             <div className="absolute hidden lg:block left-px top-0 w-0.5 h-20 bg-linear-to-b from-blue-500 to-transparent group-hover:h-full transition-all duration-700" />

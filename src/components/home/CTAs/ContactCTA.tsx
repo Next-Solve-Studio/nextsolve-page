@@ -1,14 +1,8 @@
 "use client";
-import { useEffect } from "react";
 import Link from "next/link";
 import { FiMessageSquare, FiMail, FiArrowRight } from "react-icons/fi";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export default function ContactCTA() {
-    useEffect(() => {
-        Aos.init({ duration: 1000, once: true });
-    }, []);
 
     const contactNumber = "5585997276499";
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${contactNumber}&text=Olá! Acessei o site da NextSolve e gostaria de solicitar um orçamento para meu projeto.`;
@@ -37,7 +31,7 @@ export default function ContactCTA() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808005_1px,transparent_1px),linear-gradient(to_bottom,#80808005_1px,transparent_1px)] bg-size-[30px_30px] sm:bg-size-[40px_40px]" />
             </div>
 
-            <div className="max-w-4xl mx-auto relative z-10" data-aos="zoom-in" data-aos-duration="1200">
+            <div className="max-w-4xl mx-auto relative z-10" >
                 <div className="inline-flex items-center gap-2 px-3 py-1 md:px-4 md:py-1.5 rounded-full border border-blue-500/20 bg-blue-500/5 mb-8">
                     <FiMessageSquare className="text-blue-500 text-xs md:text-sm animate-pulse" />
                     <span className="text-[10px] md:text-xs font-bold tracking-[0.4em] uppercase text-blue-400 font-syne">

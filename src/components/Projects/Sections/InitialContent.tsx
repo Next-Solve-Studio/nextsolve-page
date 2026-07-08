@@ -1,13 +1,7 @@
 "use client";
-import { useEffect } from "react";
 import { FiCode, FiLayers } from "react-icons/fi";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export default function InitialContent() {
-    useEffect(() => {
-        Aos.init({ duration: 1000, once: true });
-    }, []);
 
     return (
         <section className="relative w-full min-h-screen py-20 md:py-28 lg:py-32 bg-[#050505] overflow-hidden px-6 border-b border-white/5 flex flex-col items-center justify-center text-center">
@@ -17,7 +11,7 @@ export default function InitialContent() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808005_1px,transparent_1px),linear-gradient(to_bottom,#80808005_1px,transparent_1px)] bg-size-[35px_35px] sm:bg-size-[40px_40px]" />
             </div>
 
-            <div className="max-w-3xl mx-auto relative z-10 flex flex-col items-center justify-center gap-10 md:gap-12" data-aos="zoom-in" data-aos-duration="1200">
+            <div className="max-w-3xl mx-auto relative z-10 flex flex-col items-center justify-center gap-10 md:gap-12">
 
                 <div className="flex flex-col items-center justify-center">
 

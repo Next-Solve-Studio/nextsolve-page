@@ -1,14 +1,8 @@
 "use client";
-import { useEffect } from "react";
 import Image from "next/image";
 import { FiTerminal, FiPlay, FiSettings } from "react-icons/fi";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export default function InitialContent() {
-    useEffect(() => {
-        Aos.init({ duration: 1000, once: true });
-    }, []);
 
     return (
         <section className="relative w-full py-24 md:py-32 bg-[#050505] overflow-hidden px-6 lg:px-16 border-b border-white/5 flex items-center justify-center">
@@ -20,7 +14,7 @@ export default function InitialContent() {
 
             <div className="max-w-6xl w-full mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-                <div className="lg:col-span-7 text-left" data-aos="fade-right">
+                <div className="lg:col-span-7 text-left">
 
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md border border-blue-500/10 bg-blue-500/5 mb-6 font-mono text-[10px] uppercase tracking-widest text-blue-400">
                         <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-ping" />
@@ -39,10 +33,7 @@ export default function InitialContent() {
                     </p>
                 </div>
 
-                <div
-                    className="lg:col-span-5 flex justify-center lg:justify-end"
-                    data-aos="fade-left"
-                    data-aos-delay="200">
+                <div className="lg:col-span-5 flex justify-center lg:justify-end">
                     <div className="w-full max-w-95 bg-[#09090b] border border-white/5 rounded-2xl overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.8)] relative group hover:border-blue-500/20 transition-all duration-500">
 
                         <div className="w-full bg-[#121214] border-b border-white/5 px-4 py-3 flex items-center justify-between">

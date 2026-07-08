@@ -1,20 +1,14 @@
 "use client";
-import { useEffect } from "react";
 import Image from "next/image";
 import { FiSettings } from "react-icons/fi";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export default function ContentServiceInitial() {
-    useEffect(() => {
-        Aos.init({ duration: 1000, once: true });
-    }, []);
 
     return (
         <section className="relative w-full min-h-screen bg-[#050505] flex items-center justify-center overflow-hidden px-6 pt-28 pb-16 md:py-40">
             <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center relative z-10">
 
-                <div className="relative group w-full max-w-xl lg:max-w-none mx-auto order-1 lg:order-2 mt-4 lg:mt-0" data-aos="fade-left" data-aos-delay="200">
+                <div className="relative group w-full max-w-xl lg:max-w-none mx-auto order-1 lg:order-2 mt-4 lg:mt-0">
                     <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl" />
 
                     <div className="relative p-2 md:p-3 rounded-3xl md:rounded-[2.5rem] border border-white/5 bg-white/2 backdrop-blur-sm shadow-2xl">
@@ -36,7 +30,7 @@ export default function ContentServiceInitial() {
                     </div>
                 </div>
 
-                <div data-aos="fade-right" className="order-2 lg:order-1 mt-10 lg:mt-0">
+                <div className="order-2 lg:order-1 mt-10 lg:mt-0">
 
                     <div className="inline-flex items-center gap-3 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 mb-6 md:mb-8">
                         <FiSettings className="text-blue-500 animate-spin-slow text-sm" />

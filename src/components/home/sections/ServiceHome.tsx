@@ -1,24 +1,6 @@
-"use client";
-import { useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import {
-  FiShoppingCart,
-  FiLayout,
-  FiCpu,
-  FiSmartphone,
-  FiDatabase,
-  FiServer,
-} from "react-icons/fi";
+import { FiShoppingCart, FiLayout, FiCpu, FiSmartphone, FiDatabase, FiServer, } from "react-icons/fi";
 
 export default function Service() {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-      easing: "ease-out-cubic",
-      once: true,
-    });
-  }, []);
 
   const dtcards = [
     {
@@ -68,7 +50,7 @@ export default function Service() {
 
       <div className="max-w-7xl mx-auto relative z-10">
 
-        <div className="flex flex-col items-center text-center mb-20 sm:hover" data-aos="fade-up">
+        <div className="flex flex-col items-center text-center mb-20 sm:hover" >
           <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-6">
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
             <span className="text-blue-400 font-syne text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">
@@ -90,8 +72,6 @@ export default function Service() {
           {dtcards.map((item, index) => (
             <div
               key={item.id}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
               className="group relative"
             >
               <div className="absolute -inset-0.5 bg-linear-to-br from-blue-500/20 to-transparent rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
@@ -118,7 +98,7 @@ export default function Service() {
           ))}
         </div>
 
-        <div className="mt-20 flex justify-center sm:hover" data-aos="zoom-in">
+        <div className="mt-20 flex justify-center sm:hover">
           <div className="p-px bg-linear-to-r from-transparent via-blue-500/50 to-transparent w-full max-w-4xl" />
           <p className="absolute mt-8 text-gray-600 text-xs tracking-widest uppercase">
             Transformando o futuro, um código por vez.

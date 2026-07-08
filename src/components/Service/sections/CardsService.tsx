@@ -1,14 +1,8 @@
 "use client";
-import { useEffect } from "react";
 import Link from "next/link";
 import { FiShoppingCart, FiLayout, FiCpu, FiSmartphone, FiDatabase, FiArrowRight } from "react-icons/fi";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export default function CardsService() {
-    useEffect(() => {
-        Aos.init({ duration: 1000, once: true });
-    }, []);
 
     const services = [
         { id: 1, title: 'E-commerce', icon: <FiShoppingCart /> },
@@ -21,7 +15,7 @@ export default function CardsService() {
     return (
         <section className="relative w-full py-20 bg-[#050505] px-6 overflow-hidden">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-                <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4" data-aos="fade-right">
+                <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {services.map((item) => (
                         <div key={item.id} className="group relative p-6 bg-white/2 border border-white/5 rounded-2xl hover:border-blue-500/30 transition-all duration-500 hover:bg-white/4">
                             <div className="flex items-center gap-4">
@@ -39,7 +33,7 @@ export default function CardsService() {
                     </div>
                 </div>
 
-                <div className="lg:col-span-5 flex flex-col" data-aos="fade-left" data-aos-delay="200">
+                <div className="lg:col-span-5 flex flex-col">
                     <div className="flex items-center gap-3 mb-6">
                         <div className="w-8 h-px bg-blue-500/50" />
                         <span className="font-syne text-[11px] font-black tracking-[0.4em] uppercase text-blue-400">Operação e Entrega</span>

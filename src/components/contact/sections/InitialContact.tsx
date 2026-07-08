@@ -1,13 +1,7 @@
 "use client";
-import { useEffect } from "react";
 import { FiCheckCircle, FiClock, FiCpu } from "react-icons/fi";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export default function InitialContact() {
-    useEffect(() => {
-        Aos.init({ duration: 1000, once: true });
-    }, []);
 
     const stats = [
         { id: 1, label: "Projetos", value: "100+", icon: <FiCpu className="text-blue-500" /> },
@@ -20,7 +14,7 @@ export default function InitialContact() {
             <div className="absolute top-1/2 right-0 -translate-y-1/2 w-100 h-100 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div data-aos="fade-right">
+                <div >
                     <div className="flex items-center gap-3 mb-6">
                         <div className="w-10 h-px bg-blue-500/50" />
                         <span className="font-syne text-[11px] font-bold tracking-[0.4em] uppercase text-blue-400">
@@ -35,11 +29,7 @@ export default function InitialContact() {
                     <p className="text-gray-400 text-lg font-light leading-relaxed max-w-xl mb-10"> Oferecemos múltiplos canais de atendimento, incluindo WhatsApp, e-mail e nosso<span className="text-blue-400"> Agente Virtual AI</span> treinado para resolver suas demandas instantaneamente.</p>
                 </div>
 
-                <div
-                    className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4"
-                    data-aos="fade-left"
-                    data-aos-delay="200"
-                >
+                <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
                     {stats.map((stat) => (
                         <div key={stat.id}
                             className="group relative flex items-center gap-6 p-6 bg-white/2 border border-white/5 rounded-2xl transition-all duration-500 hover:border-blue-500/30 hover:bg-white/4">

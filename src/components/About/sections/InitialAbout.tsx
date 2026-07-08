@@ -1,23 +1,13 @@
 "use client";
-import { useEffect } from "react";
 import Image from "next/image";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export default function InitialAbout() {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-      easing: "ease-out-quart",
-      once: true,
-    });
-  }, []);
 
   return (
     <section className="relative w-full min-h-screen bg-[#050505] flex items-center justify-center overflow-hidden px-14 py-20">
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
 
-        <div data-aos="fade-right" className="items-center">
+        <div className="items-center">
           <div className="inline-flex items-center gap-3 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/5 mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6]" />
             <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-blue-400">
@@ -41,7 +31,7 @@ export default function InitialAbout() {
           <p className="max-w-md text-gray-500 text-base md:text-lg leading-relaxed font-light">Especializados em transformar visões complexas em infraestruturas digitais robustas. Não apenas escrevemos código, projetamos o futuro do seu negócio.</p>
         </div>
 
-        <div className="relative flex justify-center lg:justify-end" data-aos="fade-left" data-aos-delay="200">
+        <div className="relative flex justify-center lg:justify-end">
           <div className="relative p-2 rounded-4xl border border-white/5 bg-white/2 backdrop-blur-sm group">
 
             <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-blue-500 rounded-tl-xl opacity-50 group-hover:opacity-100 transition-opacity" />
