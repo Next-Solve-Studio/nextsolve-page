@@ -5,7 +5,7 @@ import Header from "@/layout/header/Header";
 import Messenger from "@/layout/Messeger/Messeger";
 import Footer from "@/layout/Footer/Footer";
 
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 
 
 export const metadata: Metadata = {
@@ -62,13 +62,13 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Header />
         <Messenger />
-        {children}
-        <Footer />
-      </body>
 
-      <GoogleAnalytics
-        gaId={process.env.NEXT_PUBLIC_GA_ID!}
-      />
+        {children}
+
+        <Footer />
+
+        <Analytics />
+      </body>
     </html>
   );
 }
